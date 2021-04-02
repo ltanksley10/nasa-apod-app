@@ -1,2 +1,2 @@
-# nasa-apod-app
-A React app built with Nasa's Picture of the Day API
+# nasa-apod-site
+A React site built with Nasa's Picture of the Day API
