@@ -12,9 +12,9 @@ body {
 .nasa-photo .date { margin: 0 auto; color: white; padding-left: 10px; padding-right: 10px; font-family: 'Barlow Condensed', sans-serif; }
 .nasa-photo .explanation { margin: 0 auto; padding: 0px 10px; color: white; font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; }
 .nasa-photo .photo-summary { border-radius: 5px; padding: 10px 0px; max-width: 70%; margin: 0 auto; text-align: justify; }
-form { display: flex; justify-content: center; margin-top: 2%; margin-bottom: 2%; }
-.date-label{ color: white; padding-top: 2px; background-color: rgba(22, 22, 22, 0.8); } 
-.dateInput { margin-left: 1%; margin-right: 1%; padding-left: 1%; font-size: 1rem; border-radius: 2px; border: none; }
+.datepicker { display: flex; justify-content: center; margin-top: 2%; margin-bottom: 2%; }
+.date-label{ color: white; padding-top: 2px; padding-right: 2px; background-color: rgba(22, 22, 22, 0.8); } 
+.dateInput { margin-left: 1%; margin-right: 1%; padding: 5px!important; font-size: 1rem; border-radius: 2px; border: none; }
 .searchButton { background-color: #9955bb!important; color: white; border: none; border-radius: 5px; padding: 10px; font-size: 1rem;
     font-family: 'Fjalla One', sans-serif; }
 .searchButton:hover { cursor: pointer; transform: scale(1.1); }

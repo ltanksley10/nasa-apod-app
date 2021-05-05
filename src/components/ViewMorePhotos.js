@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import moment from 'moment';
 import fetch from 'isomorphic-fetch';
 import NavBar from './NavBar';
 import DateInput from './DateInput';
@@ -8,15 +9,21 @@ const apiKey = process.env.REACT_APP_NASA_KEY;
 
 class ViewMorePhotos extends Component {
     state = {
-        date: "",
+        date: moment(),
         photo: ""
     };
     
-    changeDate = e => {
-        e.preventDefault();
-        let dateFromInput = e.target[0].value;
+    formatDate = aDate => {
+        let m = moment(aDate);
+        let year = m.year();
+        let month = m.month() + 1;
+        let day = m.date();
+        return `${year}-${month}-${day}`;
+    };
+    
+    changeDate = dateFromInput => {
         this.setState({ date: dateFromInput });
-        this.getPhoto(dateFromInput);
+        this.getPhoto(this.formatDate(dateFromInput));
     };
     
     getPhoto = date => {
@@ -29,7 +36,7 @@ class ViewMorePhotos extends Component {
         return (
             <React.Fragment>
                 <NavBar />
-                <DateInput changeDate={this.changeDate} />
+                <DateInput changeDate={this.changeDate} date={this.state.date} />
                 <Photo photo={this.state.photo} />
             </React.Fragment>
         );
