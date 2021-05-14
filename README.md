@@ -13,14 +13,6 @@ days by entering a date into the search field.
 
 https://nasa-apod.loritanksley.com/
 
-### Run
-
-```
-git clone
-cd nasa-apod-site
-npm start
-```
-
 ### Technologies
 
 * React.js 17.0.1
